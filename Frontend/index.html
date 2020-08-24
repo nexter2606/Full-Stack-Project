@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+ <div>
+  <button type="submit" onclick="Search()">Submit</button>
+
+ </div> 
+</div>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+/*  linking in navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+
+#container {
+  height: 400px;
+  width: 400px;
+  position: relative;
+}
+#image {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#text {
+  z-index: 100;
+  position: absolute;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  left: 150px;
+  top: 350px;
+}
+
+.centered{
+  position: absolute;
+  
+  left: 8%;
+  bottom: 10px;
+  transform: translate(90%, 60%);
+  
+  text-align: center;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+
+  
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: blue;
+  color: lightcyan;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>Welcome to Conferences!</h1>
+  <p>Checkout your favourite conferences and attend them.</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+   
+  <h1>List on Conferences</h1>
+
+    <p>You can select your desired conference from the given conferences list.  </p>
+    
+    <div class="grid-container">
+        <link rel="stylesheet" href="main.css">
+      
+        <div class="card">
+            <img src="10.jpg" alt="Conference1" >
+                            <h4><b> Antarcticonf The Conference At The Edge Of The World  </b></h4>
+                    <p>21 Jan, 2020</p>
+                    <h4><b> Paid</b></h4>
+                    <h4><b> Antarctic Peninsula (from San Antonio, Chile) </b></h4>
+                  
+          
+      
+      </div>
+      <div class="card">
+        <img src="2.jpg" alt="Conference2" >
+                <link rel="stylesheet" type="text/css" href="main.css">
+
+                <h4><b> Trion All India Bootcamp </b></h4>
+                <p>20 Jan, 2020</p>
+                <h4><b> Paid </b></h4>
+                    <h4><b> Delhi Technological University, Shahbad Daulatpur Village, Rohini Delhi, 110042 </b></h4>
+             
+      </div>
+    
+      <div class="card">
+        <img src="3.jpg" alt="Conference2" >
+                <link rel="stylesheet" type="text/css" href="main.css">
+
+                <h4><b> DELIVERY CONF </b></h4>
+                <p>21 Jan, 2020</p>
+                <h4><b> Paid </b></h4>
+                    <h4><b> Hyatt Regency Seattle, Howell Street, Seattle, WA, USA </b></h4>
+             
+      </div>
+    
+      <div class="card">
+        <img src="11.jpg" alt="Conference2" >
+                <link rel="stylesheet" type="text/css" href="main.css">
+
+                <h4><b> AppSec California </b></h4>
+                <p>24 Jan, 2020</p>
+                <h4><b> Paid </b></h4>
+                    <h4><b> AAnnenberg Community Beach House, 415 Pacific Coast Highway, Santa Monica, CA 90402, United Statestlanta </b></h4>
+             
+      </div>
+    
+      <div class="card">
+        <img src="12.jpg" alt="Conference2" >
+                <link rel="stylesheet" type="text/css" href="main.css">
+
+                <h4><b> NDC Security 2020 </b></h4>
+                <p>24 Jan, 2020</p>
+                <h4><b> Paid </b></h4>
+                    <h4><b> Clarion Hotel Oslo, Dronning Eufemias gate 15, 0191 Oslo, Norge </b></h4>
+             
+      </div>
+    
+      <div class="card">
+        <img src="6.jpg" alt="Conference2" >
+                <link rel="stylesheet" type="text/css" href="main.css">
+
+                <h4><b> Machine Learning Developers </b></h4>
+                <p>23 Jan, 2020</p>
+                <h4><b> Paid </b></h4>
+                    <h4><b> NIMHANS Convention center </b></h4>
+             
+      </div>
+
+      <div class="card">
+        <img src="13.jpg" alt="Conference2" >
+                <link rel="stylesheet" type="text/css" href="main.css">
+
+                <h4><b> NDC London 2020 </b></h4>
+                <p>31 Jan, 2020</p>
+                <h4><b> Paid </b></h4>
+                    <h4><b> Queen Elizabeth II Centre, Broad Sanctuary, London, UK </b></h4>
+             
+      </div>
+    
+      <div class="card">
+        <img src="14.jpg" alt="Conference2" >
+                <link rel="stylesheet" type="text/css" href="main.css">
+
+                <h4><b> Distributed Systems Conference </b></h4>
+                <p>1 Feb, 2020</p>
+                <h4><b> Paid </b></h4>
+                    <h4><b> Viman Nagar, Pune, Maharashtra, India </b></h4>
+             
+      </div>
+    
+<script>
+
+function Search() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+
+
+//  active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
